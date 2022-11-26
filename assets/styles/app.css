@@ -1,0 +1,10 @@
+body {
+
+}
+
+.login-form,
+.register-form {
+    width: 400px;
+    margin: 100px auto;
+
+}
