@@ -8,3 +8,47 @@ body {
     margin: 100px auto;
 
 }
+
+.vich-image img{
+    max-width: 350px!important;
+}
+
+.vich-image a{
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    color: #6c757d;
+    background-color: transparent;
+    background-image: none;
+}
+
+.vich-image input[type="checkbox" i] {
+    background-color: initial!important;
+    cursor: default!important;
+    appearance: auto!important;
+    box-sizing: border-box!important;
+    margin: 3px 3px 3px 4px!important;
+    padding: initial!important;
+    border: initial!important;
+}
+
+.entry2 img {
+    margin-bottom: 30px;
+    height: 250px;
+    width: 100%;
+}

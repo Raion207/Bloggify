@@ -1,0 +1,46 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block body %}
+
+    <br>
+    <div class="container">
+        <h1>News Catalog</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>ImageName</th>
+                    <th>CreatedAt</th>
+                    <th>UpdatedAt</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for news in news %}
+                <tr>
+                    <td>{{ news.id }}</td>
+                    <td>{{ news.title }}</td>
+                    <td>{{ news.description|slice(0,50) }}...</td>
+                    <td>{{ news.imageName }}</td>
+                    <td>{{ news.createdAt ? news.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ news.updatedAt ? news.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>
+                        <a href="{{ path('app_news_show', {'id': news.id}) }}" class="btn btn-info" style="width: 42px"><i class="fa fa-info"></i></a>
+                        <a href="{{ path('app_news_edit', {'id': news.id}) }}" class="btn btn-danger" style="float: right; margin-top: -38px; margin-left: 15px"><i class="fa fa-pen-to-square"></i></a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="7">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ path('app_news_new') }}" class="btn btn-primary">Create new</a>
+    </div>
+    <br>
+
+{% endblock %}
