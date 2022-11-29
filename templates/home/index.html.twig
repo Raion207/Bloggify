@@ -19,11 +19,10 @@
                                 <a href="single.html"><img src="{{ vich_uploader_asset(_news, 'imageFile') }}" alt="Image" class="img-fluid rounded"></a>
                                 <div class="excerpt">
 
-                                    <h2><a href="single.html">{{ _news.title }}</a></h2>
-                                    <div class="post-meta align-items-center text-left clearfix">
-                                        <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
-                                        <span>&nbsp;-&nbsp; {{ _news.createdAt|ago }}</span>
-                                    </div>
+                                    <h2>
+                                        <a href="single.html">{{ _news.title }}</a>
+                                        <span class="createdAt">{{ _news.createdAt|ago }}</span>
+                                    </h2>
 
                                     <p>{{ _news.description|slice(0,100) }}...</p>
                                     <p><a href="#" class="btn btn-outline-info">Read More</a></p>
